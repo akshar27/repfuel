@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_prefix="REPVISION_", env_file=str(ROOT / ".env"), extra="ignore")
+    model_config = SettingsConfigDict(env_prefix="REPFUEL_", env_file=str(ROOT / ".env"), extra="ignore")
 
     data_dir: Path = ROOT / "data"
     assets_dir: Path = ROOT / "backend" / "assets"

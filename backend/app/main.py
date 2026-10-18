@@ -14,7 +14,7 @@ from .tracking.feedback import DISCLAIMER
 
 logging.basicConfig(level=logging.INFO)
 
-app = FastAPI(title="RepVision AI", version="0.1.0",
+app = FastAPI(title="RepFuel", version="0.1.0",
               description="Pose-based exercise rep counting and movement feedback. " + DISCLAIMER)
 app.add_middleware(CORSMiddleware, allow_origins=settings.cors_list, allow_methods=["*"], allow_headers=["*"])
 app.include_router(router)

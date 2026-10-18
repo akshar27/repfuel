@@ -21,7 +21,7 @@ export interface AnalysisResult {
   disclaimer: string;
 }
 
-const KEY = "repvision_server_url";
+const KEY = "repfuel_server_url";
 
 /** Dev default: the machine running Metro is almost always the machine running the backend. */
 function guessServer(): string {

@@ -6,7 +6,7 @@ from collections import Counter
 from ..models.schemas import FeedbackItem, RepEvent
 
 DISCLAIMER = (
-    "RepVision AI provides estimated movement feedback from 2D pose estimation. It is not a medical "
+    "RepFuel provides estimated movement feedback from 2D pose estimation. It is not a medical "
     "assessment, injury-risk diagnosis, or guarantee of exercise safety or technique quality. "
     "Accuracy depends on camera placement, lighting, clothing and the pose model."
 )

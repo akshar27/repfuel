@@ -52,7 +52,7 @@ export function CalibrationPanel({ exercise, value, onChange }: { exercise: Exer
   const save = () => {
     const payload: Calibration = { ...value, exercise };
     const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" }));
-    const a = Object.assign(document.createElement("a"), { href: url, download: `repvision-${exercise}-calibration.json` });
+    const a = Object.assign(document.createElement("a"), { href: url, download: `repfuel-${exercise}-calibration.json` });
     a.click();
     URL.revokeObjectURL(url);
   };

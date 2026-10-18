@@ -144,7 +144,7 @@ export function WebcamAnalyzer() {
   const exportSession = () => {
     const doc = { exercise, config: cfg, summary: analyzerRef.current?.summary, reps, disclaimer: DISCLAIMER, source: "webcam (client-side, estimated)" };
     const url = URL.createObjectURL(new Blob([JSON.stringify(doc, null, 2)], { type: "application/json" }));
-    Object.assign(document.createElement("a"), { href: url, download: `repvision-webcam-${exercise}.json` }).click();
+    Object.assign(document.createElement("a"), { href: url, download: `repfuel-webcam-${exercise}.json` }).click();
     URL.revokeObjectURL(url);
   };
 

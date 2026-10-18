@@ -21,7 +21,7 @@ export default function Settings() {
 
   return (
     <View style={s.page}>
-      <Text style={s.p}>Address of the RepVision backend on your computer. Start it with:</Text>
+      <Text style={s.p}>Address of the RepFuel backend on your computer. Start it with:</Text>
       <Text style={s.code}>python3 scripts/run_local.py --lan</Text>
       <Text style={s.p}>Your phone and computer must be on the same Wi-Fi. Use the computer's LAN IP, e.g. http://192.168.1.20:8000.</Text>
       <TextInput value={url} onChangeText={setUrl} autoCapitalize="none" autoCorrect={false} keyboardType="url" style={s.input} />

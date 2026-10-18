@@ -1,10 +1,10 @@
-# RepVision AI
+# RepFuel
 
-Pose-based exercise analysis for **squats, push-ups and pull-ups**. Upload a video (or use your webcam) and RepVision
+Pose-based exercise analysis for **squats, push-ups and pull-ups**. Upload a video (or use your webcam) and RepFuel
 estimates your skeleton, tracks joint angles over time, runs an exercise-specific repetition state machine, and reports
 **full / partial / uncertain** reps with measurable feedback, an annotated video, charts and exportable JSON.
 
-![CI](https://github.com/akshar27/repvision-ai/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/akshar27/repfuel/actions/workflows/ci.yml/badge.svg)
 
 <p align="center">
   <img src="docs/img/annotated-frame.jpg" alt="Annotated frame: skeleton overlay, knee angles, phase and rep counters" width="340">
@@ -15,12 +15,18 @@ estimates your skeleton, tracks joint angles over time, runs an exercise-specifi
 sample clip (3 reps: 1 full, 2 partial - "insufficient depth, min knee angle 103°, target ≤ 100°"). Sample footage is a
 free [Mixkit](https://mixkit.co) clip; the video player in the screenshot was still loading when captured.*
 
-> **Not a medical tool.** RepVision gives *estimated* movement feedback from 2D pose estimation. It is not a medical
+> **Not a medical tool.** RepFuel gives *estimated* movement feedback from 2D pose estimation. It is not a medical
 > assessment, an injury-risk diagnosis, or a guarantee of exercise safety or technique quality. Feedback strings describe
 > measured deviations only.
 
 No LLM or vision-language model is used to guess counts. Repetitions come from pose landmarks → smoothed joint angles →
 a hysteresis state machine.
+
+## Roadmap
+
+RepFuel is growing from a rep counter into a personal trainer. **Built today:** pose-based rep counting and form
+feedback for squats, push-ups and pull-ups (web + phone app). **Planned, not built:** goal-based training plans, and
+calorie and macro estimates from food photos (estimates only, with the uncertainty shown).
 
 ## Architecture
 
@@ -86,7 +92,7 @@ cd backend && .venv/bin/uvicorn app.main:app --port 8000
 cd frontend && npm install && npm run dev   # postinstall copies the MediaPipe WASM into public/
 ```
 
-Config: copy `.env.example` → `.env` (backend, `REPVISION_*`) and set `NEXT_PUBLIC_API_URL` for the frontend if not 8000.
+Config: copy `.env.example` → `.env` (backend, `REPFUEL_*`) and set `NEXT_PUBLIC_API_URL` for the frontend if not 8000.
 
 ## Mobile app (iOS + Android)
 
@@ -195,7 +201,7 @@ from a different server), so I verified the file instead (ffprobe: H.264/yuv420p
 
 - *"Pose model not found"* → `python3 scripts/download_models.py`.
 - *Annotated video doesn't play* → check `/api/health` shows `ffmpeg: true`; without ffmpeg output is MPEG-4 Part 2.
-- *"Cannot reach the RepVision backend"* → backend not running or `NEXT_PUBLIC_API_URL`/CORS origin mismatch (`REPVISION_CORS_ORIGINS`).
+- *"Cannot reach the RepFuel backend"* → backend not running or `NEXT_PUBLIC_API_URL`/CORS origin mismatch (`REPFUEL_CORS_ORIGINS`).
 - *Few/no reps* → run *Check camera setup*; ensure required joints are visible (squat: hips–ankles; push-up: shoulders–ankles; pull-up: arms + head); loosen via the *lenient* preset or lower `rest_enter_deg`.
 - *Webcam blocked* → needs HTTPS or `localhost`, and camera permission.
 - Apple-silicon log noise (`inference_feedback_manager`, XNNPACK) from MediaPipe is harmless.

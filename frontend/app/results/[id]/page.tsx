@@ -59,7 +59,7 @@ export default function ResultsPage() {
   const seek = (ms: number) => { const v = videoRef.current; if (v) { v.currentTime = Math.max(0, ms / 1000 - 0.3); void v.play().catch(() => {}); } };
   const exportJson = () => {
     const url = URL.createObjectURL(new Blob([JSON.stringify(res, null, 2)], { type: "application/json" }));
-    Object.assign(document.createElement("a"), { href: url, download: `repvision-${res.exercise}-${res.id.slice(0, 8)}.json` }).click();
+    Object.assign(document.createElement("a"), { href: url, download: `repfuel-${res.exercise}-${res.id.slice(0, 8)}.json` }).click();
     URL.revokeObjectURL(url);
   };
   const s = res.summary;

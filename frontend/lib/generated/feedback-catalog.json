@@ -85,5 +85,5 @@
    "template": "Head did not clear the calibrated bar height at the top."
   }
  },
- "disclaimer": "RepVision AI provides estimated movement feedback from 2D pose estimation. It is not a medical assessment, injury-risk diagnosis, or guarantee of exercise safety or technique quality. Accuracy depends on camera placement, lighting, clothing and the pose model."
+ "disclaimer": "RepFuel provides estimated movement feedback from 2D pose estimation. It is not a medical assessment, injury-risk diagnosis, or guarantee of exercise safety or technique quality. Accuracy depends on camera placement, lighting, clothing and the pose model."
 }

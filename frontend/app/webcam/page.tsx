@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { WebcamAnalyzer } from "@/components/WebcamAnalyzer";
 
-export const metadata = { title: "Webcam — RepVision AI" };
+export const metadata = { title: "Webcam — RepFuel" };
 
 export default function WebcamPage() {
   return (

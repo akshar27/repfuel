@@ -10,7 +10,7 @@ export default function Layout() {
         headerStyle: { backgroundColor: c.bg }, headerTintColor: c.text, headerShadowVisible: false,
         contentStyle: { backgroundColor: c.bg },
       }}>
-        <Stack.Screen name="index" options={{ title: "RepVision AI" }} />
+        <Stack.Screen name="index" options={{ title: "RepFuel" }} />
         <Stack.Screen name="settings" options={{ title: "Server" }} />
         <Stack.Screen name="results/[id]" options={{ title: "Results" }} />
       </Stack>

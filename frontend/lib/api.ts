@@ -17,7 +17,7 @@ async function req<T>(path: string, init?: RequestInit): Promise<T> {
   try { return await parse<T>(await fetch(`${API_URL}${path}`, init)); }
   catch (e) {
     if (e instanceof ApiError) throw e;
-    throw new ApiError("network", `Cannot reach the RepVision backend at ${API_URL}. Is it running? (python scripts/run_local.py)`, 0);
+    throw new ApiError("network", `Cannot reach the RepFuel backend at ${API_URL}. Is it running? (python scripts/run_local.py)`, 0);
   }
 }
 

@@ -1,22 +1,22 @@
 {
   "expo": {
-    "name": "RepVision AI",
-    "slug": "repvision-ai",
+    "name": "RepFuel",
+    "slug": "repfuel",
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
-    "scheme": "repvision",
+    "scheme": "repfuel",
     "icon": "./assets/icon.png",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.akshar.repvision",
+      "bundleIdentifier": "com.akshar.repfuel",
       "infoPlist": {
         "NSAppTransportSecurity": { "NSAllowsLocalNetworking": true, "NSAllowsArbitraryLoads": true },
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "com.akshar.repvision",
+      "package": "com.akshar.repfuel",
       "usesCleartextTraffic": true,
       "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#0b1220" }
     },
@@ -24,8 +24,8 @@
       "expo-router",
       "expo-secure-store",
       ["expo-image-picker", {
-        "cameraPermission": "RepVision records your exercise set so it can count reps.",
-        "photosPermission": "RepVision picks a video of your exercise set to analyze.",
+        "cameraPermission": "RepFuel records your exercise set so it can count reps.",
+        "photosPermission": "RepFuel picks a video of your exercise set to analyze.",
         "microphonePermission": false
       }]
     ]

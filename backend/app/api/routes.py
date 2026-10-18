@@ -129,7 +129,7 @@ def videos(analysis_id: str, download: bool = False, store: JsonResultStore = De
     if not p.exists():
         raise http_error(404, "not_found", "Annotated video not available (analysis unknown, unfinished or failed).")
     return FileResponse(p, media_type="video/mp4",
-                        filename=f"repvision-{analysis_id[:8]}.mp4" if download else None,
+                        filename=f"repfuel-{analysis_id[:8]}.mp4" if download else None,
                         content_disposition_type="attachment" if download else "inline")
 
 
